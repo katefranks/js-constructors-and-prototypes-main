@@ -60,27 +60,30 @@ function Dog({color, status, hungry, owner} = {}) {
   //
   // oz.name = 'Ozzie';
 
+  // expect(moonshine.hungry).toBe(true);
+  // expect(oz.hungry).toBe(false);
+
 Human.prototype.pet = function(dog){
   dog.status = 'happy';
 }
 
 Human.prototype.feed = function(dog){
-  dog.hungry = 'false';
+  dog.hungry = false;
 }
 
-Dog.prototype.changeOwner = function(newOwner){
-  this.owner = 'Mady';
+Dog.prototype.changeOwner = function(human){
+  human.owner = 'Mady';
 }
+
+// Dog.prototype.changeHungry = function(newHungry){
+//   dog.hungry = false;
+// }
 
 // Dog.prototype.color = function(){}
-
-
 // Dog.prototype.status = function(){}
-
 // Dog.prototype.changeHungry = function(newHungry){
 //   this.hungry = newHungry;
 // }
-
 // oz.changeHungry(true);
 // moonshine.changeHungry(false);
 //     __
