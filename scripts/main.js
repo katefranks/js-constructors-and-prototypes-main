@@ -38,12 +38,28 @@ function expect(target) {
 // ONLY ADD CODE TO THIS SECTION
 function Human() {}
 
-function Dog() {}
+// function Dog() {}
+
+function Dog({color, status} = {}) {
+  this.color = color;
+  this.status = 'normal';
+}
 
 Human.prototype.pet = function(){}
 
 Human.prototype.feed = function(){}
 
+// Dog.prototype.color = function(){}
+
+
+// Dog.prototype.status = function(){}
+
+// Dog.prototype.changeHungry = function(newHungry){
+//   this.hungry = newHungry;
+// }
+
+// oz.changeHungry(true);
+// moonshine.changeHungry(false);
 //     __
 //    / /_  __  ______ ___  ____ _____  _____
 //   / __ \/ / / / __ `__ \/ __ `/ __ \/ ___/
