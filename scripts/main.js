@@ -37,23 +37,40 @@ function expect(target) {
 //
 // ONLY ADD CODE TO THIS SECTION
 function Human({cool} = {}) {
-  // this.pet = pet;
+  // this.pet = 'oz';
   this.cool= true;
 }
 
 // function Dog() {}
 
-function Dog({color, status, hungry} = {}) {
+function Dog({color, status, hungry, owner} = {}) {
   this.color = color;
   this.status = 'normal';
   this.hungry = true;
-  // this.owner = 'mady';
+  this.owner = owner;
+  // this.status = ['normal', 'happy'];
+    // this.status = 'normal' , 'happy';
 
 }
+  // mady.pet(oz);
 
-Human.prototype.pet = function(){}
+  // const oz = {
+  //   name: 'Oz',
+  // }
+  //
+  // oz.name = 'Ozzie';
 
-Human.prototype.feed = function(){}
+Human.prototype.pet = function(dog){
+  dog.status = 'happy';
+}
+
+Human.prototype.feed = function(dog){
+  dog.hungry = 'false';
+}
+
+Dog.prototype.changeOwner = function(newOwner){
+  this.owner = 'Mady';
+}
 
 // Dog.prototype.color = function(){}
 
