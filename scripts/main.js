@@ -40,6 +40,9 @@ function Human() {}
 
 function Dog() {}
 
+Human.prototype.pet = function(){}
+
+
 //     __
 //    / /_  __  ______ ___  ____ _____  _____
 //   / __ \/ / / / __ `__ \/ __ `/ __ \/ ___/
