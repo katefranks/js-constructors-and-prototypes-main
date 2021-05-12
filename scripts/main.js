@@ -42,6 +42,7 @@ function Dog() {}
 
 Human.prototype.pet = function(){}
 
+Human.prototype.feed = function(){}
 
 //     __
 //    / /_  __  ______ ___  ____ _____  _____
