@@ -36,9 +36,9 @@ function expect(target) {
 // \___/\____/_/ /_/____/\__/_/   \__,_/\___/\__/\____/_/  /____/
 //
 // ONLY ADD CODE TO THIS SECTION
-function Human({cool} = {}) {
+function Human({cool = false} = {}) {
   // this.pet = 'oz';
-  this.cool= true;
+  this.cool= cool;
 }
 
 // function Dog() {}
@@ -63,11 +63,7 @@ function Dog({color, status, hungry = true, owner} = {}) {
 Human.prototype.pet = function(dog){
   dog.status = 'happy';
 }
-//////////////////////5/12 @ 6pm/////////////// Break- still having trouble adding "hungry true" to Moonshine
-////////////////////////////////////////////////////////////////
-this.hungry = function(dog){
-  return true;
-}
+
 
 Human.prototype.feed = function(dog){
   dog.hungry = false;
@@ -77,20 +73,7 @@ Dog.prototype.changeOwner = function(human){
   human.owner = 'Mady';
 }
 
-//// Having difficulty making Moonshine hungry (true) & oz (false)
-// Dog.prototype.hungry = function(dog){
-//   dog.hungry = false;
-// }
 
-
-
-// Dog.prototype.color = function(){}
-// Dog.prototype.status = function(){}
-// Dog.prototype.changeHungry = function(newHungry){
-//   this.hungry = newHungry;
-// }
-// oz.changeHungry(true);
-// moonshine.changeHungry(false);
 //     __
 //    / /_  __  ______ ___  ____ _____  _____
 //   / __ \/ / / / __ `__ \/ __ `/ __ \/ ___/
