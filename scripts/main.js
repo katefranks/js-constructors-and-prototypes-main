@@ -43,14 +43,11 @@ function Human({cool} = {}) {
 
 // function Dog() {}
 
-function Dog({color, status, hungry, owner} = {}) {
+function Dog({color, status, hungry = true, owner} = {}) {
   this.color = color;
   this.status = 'normal';
-  this.hungry = true;
+  this.hungry = hungry;
   this.owner = owner;
-  // this.status = ['normal', 'happy'];
-    // this.status = 'normal' , 'happy';
-
 }
   // mady.pet(oz);
 
@@ -60,11 +57,16 @@ function Dog({color, status, hungry, owner} = {}) {
   //
   // oz.name = 'Ozzie';
 
-  // expect(moonshine.hungry).toBe(true);
+
   // expect(oz.hungry).toBe(false);
 
 Human.prototype.pet = function(dog){
   dog.status = 'happy';
+}
+//////////////////////5/12 @ 6pm/////////////// Break- still having trouble adding "hungry true" to Moonshine
+////////////////////////////////////////////////////////////////
+this.hungry = function(dog){
+  return true;
 }
 
 Human.prototype.feed = function(dog){
@@ -75,9 +77,12 @@ Dog.prototype.changeOwner = function(human){
   human.owner = 'Mady';
 }
 
-// Dog.prototype.changeHungry = function(newHungry){
+//// Having difficulty making Moonshine hungry (true) & oz (false)
+// Dog.prototype.hungry = function(dog){
 //   dog.hungry = false;
 // }
+
+
 
 // Dog.prototype.color = function(){}
 // Dog.prototype.status = function(){}
