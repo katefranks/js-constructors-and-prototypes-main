@@ -36,19 +36,25 @@ function expect(target) {
 // \___/\____/_/ /_/____/\__/_/   \__,_/\___/\__/\____/_/  /____/
 //
 // ONLY ADD CODE TO THIS SECTION
-function Human({cool = false} = {}) {
-  // this.pet = 'oz';
+
+
+
+function Human({name, cool = false} = {}) {
+  this.name = name;
   this.cool= cool;
 }
 
-// function Dog() {}
 
-function Dog({color, status, hungry = true, owner} = {}) {
+
+function Dog({name, color, hungry = true, owner, status} = {}) {
+  this.name = name;
   this.color = color;
-  this.status = 'normal';
   this.hungry = hungry;
   this.owner = owner;
+  this.status = 'normal';
 }
+
+// oz.owner = mady;
   // mady.pet(oz);
 
   // const oz = {
@@ -64,14 +70,17 @@ Human.prototype.pet = function(dog){
   dog.status = 'happy';
 }
 
+// Human.prototype.changeOwner = function(dog){
+//   dog.owner = 'Mady';
+// }
 
 Human.prototype.feed = function(dog){
   dog.hungry = false;
 }
 
-Dog.prototype.changeOwner = function(human){
-  human.owner = 'Mady';
-}
+// Dog.prototype.changeOwner = function(human){
+//   human.owner = 'Mady';
+// }
 
 
 //     __
